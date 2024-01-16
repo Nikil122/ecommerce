@@ -41,7 +41,7 @@ Review your items and place the order
                     {% for cart_item in cart_items %}
                     <tr>
                         <td>
-                            <a href="cart_item.product.get_absolute_url"><img src="{{cart_item.product.image.url}}" class="float-left rounded custom_image"></a>
+                            <a href="{{cart_item.product.get_absolute_url}}"><img src="{{cart_item.product.image.url}}" class="float-left rounded custom_image"></a>
                         </td>
                         <td class="text-left">
                             {{cart_item.product.name}}
@@ -94,7 +94,7 @@ Review your items and place the order
             </table>
             <div class="mx-auto">
                 <a href="{% url 'ele_a:allProdCat' %}" class="btn btn-secondary btn-block my_custom_button">Continue shopping</a>
-                <a href="#" class="btn btn-warning btn-block my_custom_button disabled">Buy now</a>
+                <a href="{% url 'ele_a:allProdCat' %}" class="btn btn-warning btn-block my_custom_button">Buy now</a>
             </div>
             <br>
         </div>
